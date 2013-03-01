@@ -1,0 +1,92 @@
+<?php
+	// Initialisation de la balise Doctype.
+	echo $this->doctype()."\n";
+	/*
+	 * ajout de la balise head avec :
+	 *  - les link
+	 *  - jquery (cf application.ini)
+	 *  - les méta
+	 *  - les scripts
+	 *  - le title
+	 */
+	$oHead = new Projet_Xml('head');
+	$oHead->append(array($this->headLink(),
+						 $this->jQuery(),
+						 $this->headMeta(),
+						 $this->headScript(),
+						 $this->headStyle(),
+						 $this->headTitle()
+						));
+	echo $oHead;
+
+	// On récupère l'éventuelle identité de la personne connectée.
+	$oIdent = Zend_Auth::getInstance()->getIdentity();
+
+	//création du body
+	$oBody = new Projet_Xml('body');
+
+	//bare de coté pour les menus
+	$oSideBar = new Projet_Xml('div');
+	$oSideBar->setAttr('id', 'sidebar');
+
+	//mise en place du logo
+	$oLogo = new Projet_Xml('span', array('id' => 'logo'));
+	//avec un lien
+	$oLien = new Projet_Xml('a', array('class' => 'logo', 'href' => '/'));
+	//avec l'image
+	$oImg = new Projet_Xml('img', array('class' => 'logo', 'src' => IMAGES_PATH.'/logo_full_trans.png', 'alt' => "Logo des 24h Natation"));
+	$oLien->append($oImg);
+	$oLogo->append($oLien);
+
+	//ajout du logo à la bare
+	$oSideBar->append($oLogo);
+
+	//ajout du menu
+	$oNav = new Projet_Xml('div', array('class' => 'menu'), $this->navigation()->menu());
+	$oSideBar->append($oNav);
+
+	$oBody->append($oSideBar);
+
+	//zone pour l'identite du connecté
+	$oLogin = new Projet_Xml('div');
+	$oLogin->setAttr('id','zone-login');
+
+	$this->loginZone($oLogin, $oIdent);
+
+	//si l'auth est montrée (application.ini)
+	if (AUTH_SHOWN) {
+		$oBody->append($oLogin);
+	}
+
+	//création d'un endroit pour le titre de la page courante
+	$oTopTitre = new Projet_Xml('div');
+	$oTopTitre->setAttr('id', 'TitreHaut');
+	$oTitre = new Projet_Xml('h1');
+	$oTitre->append($this->translate($this->placeholder('TitreHaut')->__toString()));
+	$oTopTitre->append($oTitre);
+	$oBody->append($oTopTitre);
+
+// 	//ajout d'une div pour les messages
+// 	$oMessages = new Projet_Xml('div');
+// 	$oMessages->setAttr('id', 'messages');
+// 	$oMessages->append($this->parseMessages($this->messages));
+
+// 	$oBody->append($oMessages);
+
+	//creation de l'élément principal de contenu
+	$oArticle = new Projet_Xml('div');
+	$oArticle->setAttr('id', 'article');
+	$oArticle->append($this->layout()->content);
+
+	$oBody->append($oArticle);
+
+	//ajout du footer
+	$oFooter = new Projet_Xml('div');
+	$oFooter->setAttr('id', 'footer');
+	//ajout des mentions légales
+	$oAncreMentions = new Projet_Xml('a', array('href' => $this->url(array(), 'main-mentions_legales'), 'target' => '_blank'), $this->translate('mentions.legales.link'));
+	$oFooter->append($oAncreMentions);
+
+	$oBody->append($oFooter);
+
+	echo $oBody;

@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+
+#contacts, #email {
+	margin : 1em 4em;
+}
+
+.contact, #email {
+	max-width : 30em;
+}
+
+.contact {
+	margin-bottom : 2em;
+}
+
+.contact .titre {
+	font-size : 2em;
+	text-align : left;
+	border-bottom : 2px solid black;
+	display : block;
+}
+
+.contact .personne {
+	display : block;
+	line-height : 2em;
+	clear : both;
+}
+
+.personne .numero {
+	text-align : right;
+	float : right;
+}
+
+#email {
+	text-align : center;
+	margin-top : 1em !important;
+	
+}
+
+#email > a {
+	font-size : 4em;
+}
+
+#article div,#article img,#article p {
+	margin : 0 auto;
+}

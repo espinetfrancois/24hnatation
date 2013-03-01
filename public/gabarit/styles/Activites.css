@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+
+
+
+.jour {
+	margin	: 5px 0;
+	padding : 4px;
+	background-color	: rgb(200,200,200);
+	background-color	: rgba(200,200,200,0.8);
+	box-shadow		: 0 0 1px rgba(200,200,200,1);
+	border-radius	: 5px;	
+}
+
+.jour>.titre {
+	font-size	: 3em;
+	border-bottom : 1px solid black;
+	
+	display : block;
+}
+
+
+.activite {
+	margin : 5px 0;
+	padding : 2px;
+	border-radius	: 4px;
+	cursor	: default;
+}
+
+.activite.admin, .activite.inscriptible {
+	cursor : pointer;
+}
+.activite.admin:hover {
+	background-color	: rgba(200, 50, 50, 0.9);
+}
+
+.activite:nth-of-type(1) {
+	margin-top	: 10px;
+}
+
+.activite:last-of-type {
+	margin-bottom : 10px;
+}
+
+.activite>.titre {
+	font-size	: 2em;
+	font-weight	: bold;
+	margin-left : 3px;
+}
+
+.activite>.dates {
+	font-size	: 1.5em;
+	margin-left	: 1em;
+}
+
+
+
+/** couleurs pour les activites **/
+.activite[color="0"] {
+	background-color : rgb(150,150, 200);
+	background-color : rgba(150,150, 200, 0.7);
+}
+
+.activite[color="1"] {
+	background-color : rgb(150,150, 235);
+	background-color : rgba(150,150, 235, 0.7);
+}
+
+.activite[color="2"] {
+	background-color :rgb(150,150, 255);
+	background-color :rgba(150,150, 255, 0.7);
+}
+
+
+/**decoration du formulaire de modification**/
+
+form#FormModifActivite {
+	width	: 100% !important;
+	max-width : 80%;
+}
+
+
+/** déoration des éléments d'explication */
+
+div.programme_howto {
+	margin-bottom : 2em;
+	margin-left		:2em;
+	font-size		: 1.3em;
+}
+
+div.programme_howto ul {
+	font-size : 1em;
+	line-height	: 1.2em;
+}

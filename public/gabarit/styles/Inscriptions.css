@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+#inscriptions {
+	margin : 1em;
+}
+
+#inscriptions .activite {
+	border-radius	: 3px;
+	background-color : rgba(150,150, 200, 0.7);
+	padding			: 0.8em;
+	margin			: 5px;
+/* 	line-height		: 2em; */
+}
+
+.activite .titre {
+	font-size	: 2em;
+}
+
+.activite a {
+	color	: blue;
+	margin-left	: 1em;
+	line-height		: 1em;
+}
+
+
+div.inscription_howto {
+	font-size : 1.2em;
+}
+div.inscription_howto ul {
+	font-size	: 1em;
+}
+
+.activite.admin {
+	cursor			: pointer;
+}
+.activite.admin:hover {
+	background-color	: rgba(200, 50, 50, 0.9) !important;	
+}

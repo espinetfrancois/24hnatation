@@ -1,0 +1,10 @@
+<?php
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/consulterPhotos.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Photos.css');
+$this->placeholder('TitreHaut')->set("page.titre.photos");
+echo $this->form;
+$oDiv = new Projet_Xml('div');
+$oDiv->setAttr('id', 'photos');
+$oDiv->append($this->afficherPhotos($this->photos));
+
+echo $oDiv;

@@ -1,0 +1,10 @@
+<?php
+$this->placeholder('TitreHaut')->set("Enregistrement");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/Login.css');
+
+echo new Projet_Xml('p', array('class' => 'emph register'), $this->translate('login.register.blabla'));
+echo $this->oForm;
+
+$oMentions = new Projet_Xml('p', array('class' => 'mentions-legales'), $this->translate('mentions.legales.content'));
+
+echo $oMentions;

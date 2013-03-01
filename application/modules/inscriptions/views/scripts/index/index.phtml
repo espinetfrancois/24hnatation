@@ -1,0 +1,21 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.admin.titre.inscriptions");
+
+$this->headLink()->appendStylesheet(STYLES_PATH . '/Inscriptions.css');
+
+if ($this->messageFerme != "") {
+	$oSpan = new Projet_Xml('span', array('class' => 'closed'),
+			$this->translate($this->messageFerme));
+	echo $oSpan;
+} else {
+
+	$oH2 = new Projet_Xml('h2', array('class' => 'inscription_howto'),
+			$this->translate('inscriptions.howto.titre'));
+	$oContent = new Projet_Xml('div',
+			array('class' => 'inscription_howto text'),
+			$this->translate('inscriptions.howto.content'));
+
+	echo $oH2, $oContent;
+
+	echo $this->inscriptionsActi($this->aActis, $this->aJours);
+}

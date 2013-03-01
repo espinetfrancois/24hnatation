@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+#Contenu {
+	width : 0;
+	height : 0;
+}
+
+#resultWrapper {
+	float : right;
+}
+
+span.bouton {
+	margin : 4px;
+}
+
+.buttonSet {
+	float : right;
+}
+
+#FormModifResultat {
+	max-width : 90%;
+}

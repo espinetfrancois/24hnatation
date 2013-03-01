@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+#categories {
+	margin : 1em;
+}
+
+#categories tbody tr {
+	padding	: 3px;
+	margin-bottom : 3px;
+}
+#categories td {
+	padding		: 3px;
+}

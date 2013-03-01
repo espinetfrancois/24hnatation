@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+
+#SelectionCategorie {
+	padding : 0;
+	display : block;
+	overflow : auto;
+	max-width : 100%;
+	margin : 4px;
+}
+#SelectionCategorie label {
+	display : none;
+}
+
+#SelectionCategorie select {
+	float : none;
+	display : block;
+}
+
+#SelectionCategorie p.champ {
+	overflow : auto;
+	display : inline-block;
+}
+
+div.photo {
+	float : left;
+	margin : 0 1em 0 0;
+}
+
+#photos_admin .photo span.photo_delete {
+	float : right;
+	margin-right : 1em;
+}
+
+#photos_admin .photo span.uploader {
+	font-style : italic;
+	margin-left : 1em;
+	float : left;
+}
+

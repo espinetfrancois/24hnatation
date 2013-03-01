@@ -1,0 +1,5 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.sadmin.titre.gestionutilisateurs");
+
+echo new Projet_Xml('a', array('href' => $this->url(array(), 'superadmin-adduser'), 'class' => CSS_BOUTON), $this->translate('sadmin.adduser'));
+echo new Projet_Xml('a', array('href' => $this->url(array(), 'superadmin-listuser'), 'class' => CSS_BOUTON), $this->translate('sadmin.listuser'));

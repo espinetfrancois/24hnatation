@@ -1,0 +1,29 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.accueil");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Accueil.css');
+$oVid = new Projet_Xml('iframe', array('class' => 'video',
+									   'width' => 420,
+									   'height' => 315,
+									   'src' => 'https://www.youtube.com/embed/5t3dkS1o8QA?rel=0',
+									   'title'=>"Vidéo",
+									   'frameborder' => "0"));
+// $oVid = new Projet_Xml('iframe', array('class' => 'video',
+// 										'width' => 420,
+// 										'height' => 315,
+// 										'src' => 'https://www.youtube.com/embed/Oj0hfyfcaRM',
+// 										'title'=>"Vidéo",
+// 										'frameborder' => "0"));
+
+$oDiv = new Projet_Xml('div', array('class' => CSS_ACCUEIL));
+$oP1 = new Projet_Xml('p', array('class' => CSS_ACCUEIL), $this->translate("accueil.p1"));
+$oP2 = new Projet_Xml('p', array('class' => CSS_ACCUEIL), $this->translate("accueil.p2"));
+$oP3 = new Projet_Xml('p', array('class' => CSS_ACCUEIL), $this->translate("accueil.p3"));
+$oP4 = new Projet_Xml('p', array('class' => CSS_ACCUEIL), $this->translate("accueil.p4"));
+
+$oDiv->append(array($oP1,$oP2, $oP3, $oP4));
+echo $oDiv,$oVid;
+
+$oImg = new Projet_Xml('img', array('src' => IMAGES_PATH.'/partenaires/aslive.png', 'class' => 'asso'));
+$oP = new Projet_Xml('p', array('class' => CSS_LAYOUT_TEXT.' asso'), $this->translate('accueil.asso'));
+
+echo new Projet_Xml('span', array('class' => CSS_LAYOUT_CLEAR_BOTH)), $oImg, $oP;

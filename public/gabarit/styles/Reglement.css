@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+span.item {
+	font-weight : bold;
+	font-size	: 1.4em;
+}
+
+div.reglement {
+	background-color : rgba(240,240,240,0.4);
+	padding : 1em;
+	border-radius	: 0.7em;
+}
+

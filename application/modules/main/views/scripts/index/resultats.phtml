@@ -1,0 +1,12 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.resultats");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Resultats.css');
+
+if ($this->messageFerme != null) {
+	echo $this->translate($this->messageFerme);
+} else {
+
+echo $this->resultats($this->aResults);
+}
+
+

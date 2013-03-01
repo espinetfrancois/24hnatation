@@ -1,0 +1,6 @@
+<?php
+$this->placeholder('TitreHaut')->set("24H Natation - Photos");
+$helper = $this->afficherPhotos(false);
+$helper->setPhotos($this->photos);
+
+echo $helper;

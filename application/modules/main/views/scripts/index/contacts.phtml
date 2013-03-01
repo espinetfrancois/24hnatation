@@ -1,0 +1,22 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.contacts");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Contacts.css');
+
+$oDiv = new Projet_Xml('div', array('id' => 'contacts'), $this->contacts($this->orga));
+
+echo $oDiv;
+
+$oDivLien = new Projet_Xml('div', array('id' => 'email'));
+
+$oLien = new Projet_Xml('a', array('href' => 'mailto:24hnatation@frankiz.polytechnique.fr'), $this->translate("contact.us"));
+
+$oDivLien->append($oLien);
+
+echo $oDivLien;
+
+$oH2 = new Projet_Xml('h2', array(), $this->translate('contacts.acces.titre'));
+$oP = new Projet_Xml('p', array(), $this->translate('contacts.acces.contenu'));
+$oPlan = new Projet_Xml('img', array('height' => 600, 'width' => 1000, 'src' => IMAGES_PATH.'/plan.jpg', 'class' => 'plan'));
+
+echo $oH2, $oP, $oPlan;
+

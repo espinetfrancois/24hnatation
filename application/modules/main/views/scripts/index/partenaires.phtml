@@ -1,0 +1,24 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.partenaires");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Partenaires.css');
+
+$aPartenaires = array(
+		'sponsors'	=> array(
+				'label'		=> $this->translate('sponsors.general.titre'),
+				'content'	=> array(
+						'lcl'  => array('img' => "lcl.jpg", 'label' => 'LCL'),
+						'agmp' => array('img' => "agpm.jpg", 'label' => 'AGPM'),
+						'edf'  => array('img' => 'edf.gif', 'label' => 'EDF')
+				)
+		),
+		'X'			=> array(
+				'label' 	=> $this->translate('sponsors.x.titre'),
+				'content' 	=> array(
+						'x' 	=> array('img' => "X.jpg", 'label' => 'Le Corps'),
+						'kes'	=> array('img' => "kes.jpg", 'label' => 'La Kès'),
+						'xforum'=> array('img' => 'xforum.jpg', 'label' => 'X-Entreprises')
+				)
+		)
+);
+
+echo $this->partenaires($aPartenaires);

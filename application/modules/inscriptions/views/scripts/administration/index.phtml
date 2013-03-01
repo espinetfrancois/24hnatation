@@ -1,0 +1,11 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.admin.titre.inscriptions");
+$this->headLink()->appendStylesheet(STYLES_PATH . '/Inscriptions.css');
+
+$oContent = new Projet_Xml('div', array('class' => 'inscription_howto text'), $this->translate('inscriptions.admin.howto.content'));
+
+echo $oContent;
+
+echo $this->inscriptionsActi($this->aActis, $this->aJours, true);
+
+

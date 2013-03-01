@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+#mentions-legales {
+	margin : 1em;
+}
+
+#mentions-legales .titre {
+	font-size	: 4em;
+	text-align	: center;
+	display		: block;
+	margin-bottom : 20px;
+}
+
+#mentions-legales div {
+	font-size	: 1.4em;
+	padding		: 1em;
+	background-color : rgba(200, 50, 50, 0.9);
+	border-radius	: 6px;
+}

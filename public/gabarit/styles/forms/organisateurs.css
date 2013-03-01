@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+#role {
+	float : left;
+	margin-right : 3em;
+}
+
+#valid {
+	float : left;
+}

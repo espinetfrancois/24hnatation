@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+form#FilRouge {
+	max-width	: 90%;	
+}
+
+/** décoration de la partie crénaux **/
+
+table#MultiCheckBox-Crenaux td {
+	height	: 5em;
+	width	: 5em;
+	margin	: 3px;
+}
+
+table#MultiCheckBox-Crenaux td input {
+	display		: block;
+	margin		: 0;
+	width		: 100%;
+	height		: 100%;
+	cursor		: pointer;
+	float		: none;
+}
+
+
+input[type="checkbox"] {
+	-moz-appearance : none;
+	-webkit-appearance : none;
+	-o-appearance : none;
+	appearance : none;
+	
+	background-image	: -moz-linear-gradient(center center, rgb(230,230,230) 0%, rgb(250, 250,250) 100%);
+	border : 1px solid black;
+	border-radius	: 3px;
+}
+
+
+input[type="checkbox"]:checked {
+	background-image : none;
+	background-color : rgb(230,100,100) !important;
+	background-image	: -moz-linear-gradient(center center, rgb(230,50,50) 0%, rgb(250, 100,100) 100%);
+}
+
+td label {
+	width	: 100%;
+	margin-top : -1.5em;
+	text-align	: center;
+}
+/* 	background-color : blue !important; */
+/* 	color		: black !important */
+
+
+
+/**décoration de la partie bapteme */
+
+#champ-Crenaux > div#result-Crenaux {
+	float		: right;
+	margin-top	: 1em;
+}
+
+div#result-Crenaux label {
+	float 		: left;
+	margin-left	: 0.2em;
+	text-align	: center;
+	height		: 6em;
+	width		: 6em;
+	cursor		: pointer;
+	
+	border		: 1px solid black;
+	border-radius	: 5px;
+	background-color	: rgba(230,230,230,0.7);
+	margin-bottom : 0.3em;
+	padding-bottom : 1em;
+	
+}
+div#result-Crenaux label input {
+	-moz-appearance	: none;
+	-o-appearance	: none;
+	-webkit-appearance	: none;
+	appearance	: none;
+	
+	width	: 5em;
+	height	: 5em;
+	cursor  : pointer;
+/* 	margin-right : 1.3em;	 */
+	border	: 1px solid black;
+}
+
+div#result-Crenaux label input:checked {
+	background-image : none;
+	background-color : rgb(230,100,100) !important;
+	background-image	: -moz-linear-gradient(center center, rgb(230,50,50) 0%, rgb(250, 100,100) 100%);
+}

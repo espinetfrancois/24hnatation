@@ -1,0 +1,10 @@
+<?php
+$this->placeholder('TitreHaut')->set($this->oActi->getNom().$this->translate("page.titre.inscriptions.commencer"));
+$this->headScript()->appendFile(SCRIPTS_PATH.'/projet/forms/multiInput.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/inscriptions.css');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/filRouge.js');
+
+echo new Projet_Xml('div', array('class' => 'howto'.CSS_LAYOUT_TEXT), $this->message);
+echo $this->form;
+
+

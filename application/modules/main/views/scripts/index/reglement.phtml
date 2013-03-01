@@ -1,0 +1,19 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.reglement");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Reglement.css');
+
+$oH1 = new Projet_Xml('h2', array('class' => 'reglement'),$this->translate('reglement.trophe_cadres.titre'));
+$oP1 = new Projet_Xml('div', array('class' => 'reglement '.CSS_LAYOUT_TEXT), $this->translate('reglement.trophe_cadres.contenu'));
+
+$oH2 = new Projet_Xml('h2', array('class' => 'reglement'),$this->translate('reglement.trophes_autre.titre'));
+$oP2 = new Projet_Xml('div', array('class' => 'reglement '.CSS_LAYOUT_TEXT), $this->translate('reglement.trophes_autre.contenu'));
+
+
+$oH3 = new Projet_Xml('h2', array('class' => 'reglement'),$this->translate('reglement.challenge_eleves.titre'));
+$oP3 = new Projet_Xml('div', array('class' => 'reglement '.CSS_LAYOUT_TEXT), $this->translate('reglement.challenge_eleves.contenu'));
+
+$oH4 = new Projet_Xml('h2', array('class' => 'reglement'),$this->translate('reglement.tournoi_water.titre'));
+$oP4 = new Projet_Xml('div', array('class' => 'reglement '.CSS_LAYOUT_TEXT), $this->translate('reglement.tournoi_water.contenu'));
+
+
+echo $oH1, $oP1, $oH2, $oP2, $oH3, $oP3, $oH4, $oP4;

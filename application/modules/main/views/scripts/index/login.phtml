@@ -1,0 +1,14 @@
+<?php
+$this->placeholder('TitreHaut')->set("Connexion");
+$this->headLink()->appendStylesheet(STYLES_PATH . '/forms/Login.css');
+
+if (!$this->logged) {
+	$oDivExp = new Projet_Xml('p', array('id' => 'login'),
+			$this->translate("login.blabla"));
+	echo $oDivExp . '<br/>';
+	echo $this->formLogin($this->location);
+} else {
+	echo "<p> Vous êtes déjà enregistrés </p>";
+}
+
+echo new Projet_Xml('p', array('class' => CSS_LAYOUT_EMPH.' mentions-legales cert'), $this->translate('login.cert.blabla'));

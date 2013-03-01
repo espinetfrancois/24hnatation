@@ -1,0 +1,7 @@
+<?php
+$this->placeholder('TitreHaut')->set("Contacts - Modifier les organisateurs");
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionOrganisateurs.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/organisateurs.css');
+echo $this->message;
+echo $this->form;
+

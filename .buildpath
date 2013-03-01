@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="public"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="con" path="org.eclipse.dltk.USER_LIBRARY/Zend Framework 1.12.0"/>
+	<buildpathentry kind="src" path="library/ZendX"/>
+	<buildpathentry kind="src" path="library/Projet"/>
+	<buildpathentry kind="src" path="application"/>
+</buildpath>

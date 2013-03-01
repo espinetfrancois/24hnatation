@@ -1,0 +1,7 @@
+<?php
+echo $this->message;
+
+if ($this->exception != null) {
+	echo $this->exception->getLine().'<br/>';
+	echo $this->exception->getTraceAsString().'<br/>';
+}

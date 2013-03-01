@@ -1,0 +1,9 @@
+<?php
+$this->placeholder('TitreHaut')->set("Connexion Extérieure");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/Login.css');
+
+
+echo $this->oForm;
+
+$aRegister = new Projet_Xml('a', array('href' => $this->registerUrl, 'class' => 'register'), $this->translate('login.register'));
+echo $aRegister;

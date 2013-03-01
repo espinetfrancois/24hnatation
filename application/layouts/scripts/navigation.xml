@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- le menu de l'application -->
+<!-- Grâce à Projet_Navigation_Page : - le calcul de la page active est automatique 
+	: plus besoin de spécifier le module, controller, action pour chaque page 
+	si on a défini la route - les ressources ACL sont calculées automatiquement 
+	si la route est définie (module_controller_action). Il faut cependant que 
+	la classe Route utilisée comprenne la méthode getDefaults (d'où l'utilité 
+	de Projet_Controller_Router_Route_Chain). On peut toujours préciser à la 
+	main une autre ressource. -->
+<configdata>
+	<menu>
+		<programme>
+			<label>menu.programme</label>
+			<route>main-programme</route>
+			<pages>
+			    <acticonsult>
+			        <label>menu.activites.consulter</label>
+			        <route>administration-activite_consulter</route>
+			    </acticonsult>
+				<actisadd>
+				    <label>menu.activites.ajouter</label>
+				    <route>administration-activite_ajouter</route>
+				</actisadd>
+			</pages>
+		</programme>
+		<resultats>
+			<label>menu.resultats</label>
+			<route>main-resultats</route>
+			<pages>
+			    <resultconsult>
+			        <label>menu.resultats.consulter</label>
+			        <route>administration-resultat_consulter</route>
+			    </resultconsult>
+				<resultsadd>
+				    <label>menu.resultats.ajouter</label>
+				    <route>administration-resultat_ajouter</route>
+				</resultsadd>
+			</pages>
+		</resultats>
+		<reglement>
+			<label>menu.reglement</label>
+			<route>main-reglement</route>
+		</reglement>
+		<inscriptions>
+			<label>menu.inscriptions</label>
+			<route>inscriptions-accueil</route>
+			<pages>
+				<admininscriptions>
+					<label>menu.admin.inscriptions</label>
+					<route>inscriptions-admin</route>
+				</admininscriptions>
+<!-- 				<seeinscriptions> -->
+<!-- 				    <label>menu.admin.inscriptions.see</label> -->
+<!-- 				    <route>inscriptions-admin_listings</route> -->
+<!-- 				</seeinscriptions> -->
+			</pages>
+		</inscriptions>
+		
+		<photos>
+			<label>menu.photos</label>
+			<route>photos-accueil</route>
+			<pages>
+			    <admincat>
+			        <label>menu.cat.change</label>
+			        <route>photos-admin_cat</route>
+			    </admincat>
+			    <adminphotos>
+			        <label>menu.photo.change</label>
+			        <route>photos-admin_photo</route>
+			    </adminphotos>
+			    <adminphotosadd>
+			        <label>menu.photo.add</label>
+			        <route>photos-admin_photo_add</route>
+			    </adminphotosadd>
+			</pages>
+		</photos>
+		<contacts>
+			<label>menu.contacts</label>
+			<route>main-contacts</route>
+			<pages>
+			    <admincontaddorga>
+			        <label>menu.cont.organisateurs.modifier</label>
+			        <route>administration-contacts_modifier</route>
+			    </admincontaddorga>
+			</pages>
+		</contacts>
+		<partenaires>
+			<label>menu.partenaires</label>
+			<route>main-partenaires</route>
+		</partenaires>
+<!-- 		<administration> -->
+<!-- 			<label>menu.administration</label> -->
+<!-- 	 		<route>administration-accueil</route>  -->
+<!-- 			<pages> -->
+<!-- 			    <admininscriptions> -->
+<!-- 			        <label>menu.admin.inscriptions</label> -->
+<!-- 			        <route>inscriptions-admin</route> -->
+<!-- 			    </admininscriptions> -->
+<!-- 			</pages> -->
+<!-- 		</administration> -->
+		<superadministration>
+			<label>menu.superadmin</label>
+			<route>superadmin-phpinfo</route>
+				<pages>
+				    <adminusers>
+				        <label>menu.sadmin.usermanagement</label>
+				        <route>superadmin-usermanagement</route>
+				    </adminusers>
+				    <phpinfo>
+				        <label>menu.sadmin.phpinfo</label>
+				        <route>superadmin-phpinfo</route>
+				    </phpinfo>
+				     <controlpanel>
+				        <label>menu.sadmin.controlpanel</label>
+				        <route>superadmin-controlpanel</route>
+				    </controlpanel>
+<!-- 				    <adminbinets> -->
+<!-- 				        <label>menu.sadmin.adminbinets</label> -->
+<!-- 				        <route>superadmin-binets</route> -->
+<!-- 				    </adminbinets> -->
+				</pages>
+		</superadministration>
+	</menu>
+</configdata>

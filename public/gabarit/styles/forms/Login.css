@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+a.register {
+	font-size	: 1.7em;
+	color		: blue;
+	margin-left	: 2em;
+	text-align	: center;
+}
+
+p.cert {
+	margin-top : 1em;
+}
+
+p.register {
+	margin : 0 10%;
+	text-align : center;
+}
+

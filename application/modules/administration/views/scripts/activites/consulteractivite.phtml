@@ -1,0 +1,12 @@
+<?php
+$this->placeholder('TitreHaut')->set("Modifier les activites");
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionActivites.js');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/activite.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Activites.css');
+
+
+echo 'Cliquez pour modifier une activité :';
+echo $this->activites($this->aActis, $this->aJours, true);
+
+$oDivNo = new Projet_Xml('div', array('class' => 'no-show', 'id' => 'form_temp'));
+echo $oDivNo;

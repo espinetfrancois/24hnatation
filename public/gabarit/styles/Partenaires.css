@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+#partenaires .categorie {
+	overflow : auto;
+	padding		: 1em;
+
+}
+
+/** titre de la catégorie **/
+.categorie>span {
+	text-align	: center;
+	display		: block;
+	width		: 100%;
+	font-size	: 3em;
+	border-bottom : 2px solid black;
+}
+.categorie {
+	display : inline-block;
+}
+
+.categorie .container {
+	width : auto;
+	display	: inline-block;
+}
+
+.categorie .partenaire {
+	float : left;
+	display : inline-block;
+	max-width	: 20%;
+	margin		: 5px 1em;
+	background-color	: rgba(230,230,230, 0.7);
+	padding		: 5px;
+	border-radius	: 8px;
+}
+
+
+#partenaires img {
+	max-width	: 100%;
+}
+
+.partenaire span {
+	font-size : 2em;
+	display		: block;
+	width		: 100%;
+	text-align	: center;
+	margin		: 5px 0;
+}
+
+.partenaire img {
+	
+}

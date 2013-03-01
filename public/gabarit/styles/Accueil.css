@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+
+.video, div.accueil {
+	margin-top	: 1em;	
+}
+
+.video {
+	height	: 390px;
+	width	: 480px;
+	margin-bottom : 1em;
+	float	: right;
+	max-width : 50%;
+}
+
+div.accueil {
+	float	: left;
+	max-width	: 50%;
+}
+
+p.accueil {
+	font-size : 1.4em;
+	display		: block;
+	margin-bottom : 1em;
+	padding-right	: 1em;
+}
+
+.asso {
+	padding-top  : 1em;
+	padding-bottom : 2em;
+}
+
+img.asso {
+	width		: 17%;
+	margin-top  : 5em;
+	float 		: left;
+	clear 		: left;
+}
+
+p.asso {
+	margin		: 0;
+	max-width : 80%;
+	float 		: right;
+}

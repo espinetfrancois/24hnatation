@@ -1,0 +1,6 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.sadmin.titre.controlpanel");
+
+
+echo new Projet_Xml('a', array('class' => CSS_BOUTON, 'href' => '/fr/superadmin/axsadmin-cleartranslatecache'), $this->translate('sadmin.cache.clear.translate'));
+echo new Projet_Xml('a', array('class' => CSS_BOUTON, 'href' => '/fr/superadmin/axsadmin-testmail'), $this->translate('sadmin.mail.test'));

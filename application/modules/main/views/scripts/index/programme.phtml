@@ -1,0 +1,18 @@
+<?php
+$this->placeholder('TitreHaut')->set("page.titre.programme");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Activites.css');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/Activites.js');
+
+$oH2 = new Projet_Xml('h2', array(), $this->translate('programme.participation.titre'));
+
+$oContenu = new Projet_Xml('div', array('class' => 'programme_howto '.CSS_LAYOUT_TEXT), $this->translate('programme.participation.contenu'));
+
+echo $oH2, $oContenu;
+echo $this->activites($this->aActis,$this->aJours);
+
+$oH3 = new Projet_Xml('h2', array(), $this->translate('programme.lots.titre'));
+$oContenu2 = new Projet_Xml('div', array('class' => CSS_LAYOUT_TEXT), $this->translate('programme.lots.contenu'));
+
+$oFoot = new Projet_Xml('p', array('class' => CSS_LAYOUT_EMPH), $this->translate('programme.footer'));
+
+echo $oH3, $oContenu2, $oFoot;

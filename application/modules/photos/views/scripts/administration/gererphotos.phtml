@@ -1,0 +1,16 @@
+<?php
+$this->placeholder('TitreHaut')->set('photo.gestion');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionPhotos.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/gererphotos.css');
+$oDiv = new Projet_Xml('div');
+$oDiv->setAttr('id', 'photos_admin');
+
+
+
+$helper = $this->afficherPhotos(true);
+$helper->setForm($this->form);
+$helper->setPhotos($this->photos);
+
+$oDiv->append($helper->__toString());
+
+echo $oDiv;

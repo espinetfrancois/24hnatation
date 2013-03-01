@@ -1,0 +1,14 @@
+<?php
+$this->placeholder('TitreHaut')->set('cat.gestion');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionCategories.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/categories.css');
+$oDiv = new Projet_Xml('div');
+$oDiv->setAttr('id', 'categories');
+
+echo $oDiv;
+
+$oButAjouter = new Projet_Xml('span', array("id" => "ajouterCategorie", "class" => "bouton"), $this->translate('form.cat.add'));
+echo $oButAjouter;
+
+$oDivForm = new Projet_Xml('div', array("id" => "formAjouter"), $this->form);
+echo $oDivForm;

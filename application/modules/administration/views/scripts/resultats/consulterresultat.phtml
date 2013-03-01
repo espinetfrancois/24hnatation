@@ -1,0 +1,12 @@
+<?php
+$this->placeholder('TitreHaut')->set("Modifier les résultats");
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionResultats.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/Resultats.css');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/gestionResultats.css');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/gestionResultat.js');
+
+echo 'Cliquez pour modifier un résultat :';
+echo $this->resultats($this->aResults, true);
+
+$oDivNo = new Projet_Xml('div', array('class' => 'no-show', 'id' => 'form_temp'));
+echo $oDivNo;

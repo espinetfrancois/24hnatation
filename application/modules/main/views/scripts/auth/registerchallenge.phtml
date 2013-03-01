@@ -1,0 +1,9 @@
+<?php
+$this->placeholder('TitreHaut')->set("Enregistrement");
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/Login.css');
+
+$oA = new Projet_Xml('a', array('href' => $this->url(array(), 'main-login_ext')), $this->translate('form.action.connect'));
+echo $this->translate($this->message);
+echo '<br/>';
+
+echo $oA;
